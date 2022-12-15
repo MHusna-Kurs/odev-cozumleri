@@ -1,0 +1,164 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger{
+    padding: 7px 0px;
+    border:1px solid green;
+    height: 100%;
+    display:none;
+    float:left;
+    cursor:pointer;
+    box-sizing: border-box;
+}
+
+.line{
+    width:30px;
+    height:5px;
+    margin-top:5px;
+    background-color:maroon;
+    border-radius:3px;  
+    transition:transform 0.5s;
+}
+    
+.logo{
+    float:right;
+    line-height: 50px;
+}
+
+.menu{
+    background-color:yellow;
+    width:100%;
+    display:inline-block;
+}
+    
+.menu .right-side{
+    border:1px solid black;
+    display:inline-block;
+    float:right;
+    width:85%;
+}
+    
+.menu .left-side{
+    width:14%;
+    border:1px solid blue;
+    display:inline-block;
+    float:left;
+    height:50px;
+}
+
+.menu ul{
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+}
+    
+.menu li{
+    display:inline-block;
+}
+    
+.menu ul li{
+    position:relative;
+}
+    
+.menu a{
+    text-decoration:none;
+    background-color:yellow;
+    display:inline-block;
+    width:135px;
+    text-align:center;
+    line-height:50px;
+    font-size: 15px;
+}
+    
+.menu a:hover{
+    background-color:black;
+    color:white;
+}
+    
+.menu ul li ul{
+    display:none;
+    position:absolute;
+    top:50;
+    left:0;
+}
+    
+.menu ul li:hover ul{
+    display:block;
+}
+    
+@media (max-width:992px){
+    .right-side ul li a{
+        width:95px ;
+        font-size:13px;
+    }
+}
+    
+@media (max-width:768px){
+
+    .hamburger{
+        display: inline-block;
+    }
+
+    .right-side{
+        display:none !important;
+        width: 70%;
+    }
+
+    .left-side{
+        width: 25% !important;
+    }
+}
+
+@media (min-width:1200px){
+
+}
+
+.content{
+    border: 1px solid purple;
+    background-color: darkblue;
+    height: 90vh;
+}
+
+.slide-menu{
+    background-color: black;
+    height: 90vh;
+    width: 45%;
+
+    position: absolute;
+    left: -45%;
+
+    transition: 0.5s ease-in-out;
+}
+
+.slide-menu ul{
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.slide-menu ul li a{
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 10px 5px;
+}
+
+.slide-menu ul li ul{
+    display: none;
+}
+
+.slide-menu ul li ul li{
+    padding-left: 20px;
+}
+
+.icon-style{
+    display: inline-block;
+}
+
+ion-icon{
+    float: right;
+    transition: 0.75s;
+}

@@ -1,0 +1,309 @@
+<html><!--YATAYDA AÇILIR MENÜ ÖRNEĞİ:-->
+	<head>
+		<meta charset="UTF-8">
+        <meta name="robots" content="all">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<style>
+        body{
+            padding:0px;
+            margin:0px;
+        }
+	.hamburger{
+	padding: 7px 0px;
+	border:1px solid green;
+    height: 100%;
+	display:none;
+	float:left;
+	cursor:pointer;
+    box-sizing: border-box;
+	}
+	.line{
+	width:30px;
+	height:5px;
+	margin-top:5px;
+	background-color:maroon;
+	border-radius:3px;	
+	transition:transform 0.5s;
+	}
+    .logo{
+        float:right;
+        border:1px solid blue;
+        line-height: 50px;
+    }
+	.menu{
+	background-color:yellow;
+	width:100%;
+	display:inline-block;
+	}
+	.menu .right-side{
+	border:1px solid black;
+	display:inline-block;
+	float:right;
+	width:85%;
+	}
+	.menu .left-side{
+	width:14%;
+	border:1px solid blue;
+	display:inline-block;
+	float:left;
+	height:50px;
+	}
+	.menu ul{
+	
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	
+	}
+	.menu li{
+	    display:inline-block;
+	
+	}
+	.menu ul li{
+	    position:relative;
+	}
+	.menu a{
+        text-decoration:none;
+        background-color:yellow;
+        display:inline-block;
+        width:135px;
+        text-align:center;
+        line-height:50px;
+        font-size: 15px;
+	}
+	.menu a:hover{
+        background-color:black;
+        color:white;
+	}
+	.menu ul li ul{
+        display: none;
+        position:absolute;
+        top:50;
+        left:0;
+	}
+	.menu ul li:hover ul{
+	    display:block;
+	}
+    .content{
+      
+        height: 90vh;
+        background-color: darkblue;
+    }
+    .slide-menu{
+        background-color: #1C2833;
+       
+        height: 90vh;
+        width: 45%;
+        position: absolute;
+        left:-45%;
+        transition: 0.5s ease-in-out;
+        box-sizing: border-box;
+    }
+    .slide-menu ul{
+        list-style-type: none;
+       padding: 0px;
+   
+        margin:0px;
+    }
+    .slide-menu ul li{
+       
+
+    }
+    .slide-menu ul li a{
+       
+        text-decoration: none;
+        color:white;
+        display: block;
+        padding:10px 15px;
+        
+
+    }
+    .slide-menu ul li ul{
+        display: none;
+    }
+    .slide-menu ul li a:hover{
+        box-shadow: rgba(99, 99, 99, 0.7) 0px 2px 11px;
+    }
+	
+@media (max-width:992px){
+    .right-side ul li a{
+        width:95px ;
+        font-size:13px;
+    }
+}
+    
+@media (max-width:768px){
+    .hamburger{
+        display: inline-block;
+    }
+    .right-side{
+        display:none!important;
+        width: 70%;
+    }
+    .left-side{
+        width: 25%!important;
+    }
+}
+.icon-style{
+  
+    display: inline-block;
+   
+}
+ion-icon{
+    float: right;
+    transition: 0.6s;
+}
+	</style>
+	</head>
+<body onresize="updateScreen()">
+<div class="main-div">
+        <div class="menu">
+                <div class="left-side">
+                    <div class="logo">BusBilet</div>
+                <div class="hamburger" onclick="hamburgerOpenClose()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                </div>
+                </div>
+                <div class="right-side">
+                <ul>
+                    <li><a href="url">Anasayfa</a></li>
+                    <li><a href="url">Hakkımızda</a></li>
+                    <li >		
+                        <a href="url">Şirket Tarihçesi</a>
+                        <ul type="circle">
+                            <li><a href="url">Yöneticilerimiz</a></li>
+                            <li><a href="url">Çalışanlarımız</a></li>
+                            <li><a href="url">Faaliyetlerimiz</a></li>		
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="url">Hizmetlerimiz</a>
+                        <ul type="circle">
+                            <li><a href="url">Web Tasarım</a></li>
+                            <li><a href="url">Hosting</a></li>
+                            <li><a href="url">Logo Tasarım</a></li>
+                            <li><a href="url">Danışmanlık</a></li>		
+                        </ul>
+                    </li>
+                    <li><a href="url">Referanslarımız</a></li>
+                    <li><a href="url">İletişim</a></li>
+                </ul>
+                </div>
+                    
+                </div>
+                <div class="content">
+                    <div class="slide-menu">
+                            <ul>
+                                    <li><a href="url">Anasayfa</a></li>
+                                    <li><a href="url">Hakkımızda</a></li>
+                                    <li>
+                                         	
+                                         <a  onclick="collapse(2)" href="#">Şirket Tarihçesi<ion-icon name="caret-down-outline"></ion-icon></a>
+                                        <ul type="circle">
+                                            <li><a href="#">Yöneticilerimiz</a></li>
+                                            <li><a href="url">Çalışanlarımız</a></li>
+                                            <li><a href="url">Faaliyetlerimiz</a></li>		
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a onclick="collapse(3)" href="#">Hizmetlerimiz<ion-icon name="caret-down-outline"></ion-icon></a>
+                                        <ul type="circle">
+                                            <li><a href="url">Web Tasarım</a></li>
+                                            <li><a href="url">Hosting</a></li>
+                                            <li><a href="url">Logo Tasarım</a></li>
+                                            <li><a href="url">Danışmanlık</a></li>		
+                                        </ul>
+                                    </li>
+                                    <li><a href="url">Referanslarımız</a></li>
+                                    <li><a href="url">İletişim</a></li>
+                            </ul>
+                    </div>
+                </div>
+</div>
+
+    <script>
+        function updateScreen(){
+            const mq = window.matchMedia( "(min-width: 768px)" );
+
+            if (mq.matches) {
+            // window width is at least 768px
+                var line = document.getElementsByClassName("line");
+                var slider = document.getElementsByClassName("slide-menu")[0];
+
+                line[0].style.opacity="1";
+                line[1].style.transform="rotate(0deg)";
+                line[2].style.marginTop="5px";
+                line[2].style.transform="rotate(0deg)";
+                slider.style.left="-45%";
+            } else {
+            // window width is less than 768px
+            }
+        }
+
+        function hamburgerOpenClose(){
+            var line = document.getElementsByClassName("line");
+            var slider = document.getElementsByClassName("slide-menu")[0];
+            if (line[0].style.opacity=="0") {
+                line[0].style.opacity="1";
+                line[1].style.transform="rotate(0deg)";
+                line[2].style.marginTop="5px";
+                line[2].style.transform="rotate(0deg)";
+                slider.style.left="-45%";
+                   //closing all that is opened already.
+            var slideMenu = document.getElementsByClassName("slide-menu")[0];
+            var ul = slideMenu.firstElementChild;
+            var listItems = ul.children;
+           
+        
+             for(item of listItems){
+
+               var len=item.children.length;
+              if(len>1){
+                var a = item.children[0];
+                var subUl = item.children[1];
+                subUl.style.display="none";
+            a.firstElementChild.style.transform="rotate(0deg)";
+              }
+              else{}
+             }
+            }
+            else{
+                line[0].style.opacity="0";
+                line[1].style.marginTop="5px";
+                line[1].style.transform="rotate(-45deg)";
+                line[2].style.marginTop="-5px";
+                line[2].style.transform="rotate(45deg)";
+                slider.style.left="0px";
+         
+           
+            
+            }
+            
+        }
+
+        function collapse(index){
+            var slideMenu = document.getElementsByClassName("slide-menu")[0];
+            var ul = slideMenu.firstElementChild;
+            var listItems = ul.children;
+            var a = listItems[index].children[0];
+           
+            var subUl = listItems[index].children[1];
+           
+            subUl.style.display=="block"?subUl.style.display="none":subUl.style.display="block";
+            subUl.style.display=="block"?a.firstElementChild.style.transform="rotate(180deg)":a.firstElementChild.style.transform="rotate(0deg)";
+            var sublistItems=subUl.children;
+           for(item of sublistItems){
+            item.firstElementChild.style.paddingLeft="20px";
+            item.firstElementChild.style.backgroundColor="#212F3D";
+           }
+         
+        }
+        
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
