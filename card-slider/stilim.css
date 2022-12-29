@@ -1,0 +1,50 @@
+#cardSlider{
+    background-color: black;
+    padding: 10px 10px;
+    display: block;
+
+   
+}
+.carousel-inner{
+    border:5px solid black;
+    border-radius:20px;
+}
+
+.carousel-control-prev,.carousel-control-next{
+    background-color: rgba(0, 0, 0, 0.5);
+    width:44px;
+    height: 44px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+}
+
+.card{
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.5);
+   overflow: hidden;
+   border-radius: 10px;
+   border:none;
+   margin: 40px 0px;
+   opacity: 0.7;
+}
+
+.customDraw{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card:hover{
+    opacity: 1;
+}
+
+@media (min-width:768px){
+    .carousel-item{
+        flex:0 0 19.0%;
+        margin:6px;
+        display: inline-block;
+    }
+    .carousel-inner{
+        display: flex;
+    }
+}
